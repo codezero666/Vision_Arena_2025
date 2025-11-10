@@ -26,14 +26,20 @@ ros2 launch camera_sim_pkg camera.launch.py
 ```
 ros2 launch target_model_pkg target_action.launch.py
 ```
-不加参数就是默认在 5 1 0.5 的位置生成箭头
-参数有
-model 模型文件
-model_name 模型名字（不能生成名字一样的模型）
-x
-y
-z
-roll
+
+参数有：
+model 模型文件（路径src/target_model_pkg/urdf/）
+
+model_name 模型名字（不能生成名字一样的模型）<font style="color:#DF2A3F;">**识别要定义为[话题与服务消息说明](doc/Topic.md)下对应的模型名字**</font>(例如例程中使用的模型名字为sphere，这里的model_name也要写sphere)
+
+
+x ：x位置
+
+y ：y位置
+
+z ：z位置
+
+roll ：roll位置
 例如(装甲板1)：
 ```
 ros2 launch target_model_pkg target_action.launch.py model:=src/target_model_pkg/urdf/armor/armor_1.sdf model_name:=armor_1
